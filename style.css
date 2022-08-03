@@ -1,0 +1,22 @@
+html {
+    font-size: 10px;
+    /*background: url('./arctic_fox.jpg') bottom center;*/
+    background-size: cover;
+  }
+
+title {
+  font-size: 100px;
+}
+
+.title_container {
+  position: relative;
+  text-align: center;
+}
+
+.center {
+  font-size: 50px;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
