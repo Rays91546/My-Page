@@ -20,3 +20,21 @@ title {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.SpaceShipGame {
+  position: relative;
+  font-size: 20px;
+  color: white;
+  width: 50%;
+  height: 50%;
+}
+
+.Text {
+  font-size: 100%;
+  position: absolute;
+  text-align: center;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
