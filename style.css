@@ -11,7 +11,7 @@
 :root {
   --primary-color: #A5C9CA;
   --secondary-color: #395B64;
-  --tertiary-color: #89435;
+  --tertiary-color: #89435C;
   --quadraury-color: #495A8C;
   --red-color: #ff8080;
   --accent-color: #2C3333;
@@ -139,6 +139,7 @@ body {
 /* Main content on page */
 
 .main {
+  overflow-y: auto;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-left: 60px;
   margin-top: 60px;
@@ -147,6 +148,7 @@ body {
   padding: 10px;
 
   position: fixed;
+  height: 800px;
 
   /*background-color: #54BAB9;*/
 
@@ -174,13 +176,81 @@ body {
   }
 }
 
+@media (max-width: 1003px) {
+  .main {
+    overflow-y: scroll;
+  }
+}
+
 .main-text p {
   padding: 5px;
 }
 
 .main-img {
+  height: 80%;
   /*width: 50%;*/
   display: flex;
   justify-content: center;
   /*padding: 5px;*/
+}
+
+/* Styling for the project boxes on the Projects page */
+
+.projects {
+  margin-top: 70px;
+  margin-left: 70px;
+  margin-right: 70px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+@media (max-width: 1003px) {
+  .projects {
+    overflow-y: scroll;
+  }
+}
+
+.project-box {
+  width: 200px;
+  height: auto;
+
+  padding: 5px;
+  margin: 10px;
+  
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  background-color: var(--quadraury-color);
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  border: solid;
+  border-radius: 5px;
+  border-color: var(--accent-color);
+  border-width: 5px;
+
+  text-decoration: none;
+}
+
+.project-box a {
+  text-decoration: none;
+  color: var(--offwhite-color);
+}
+
+.project-box a h3 {
+  height: 20%;
+}
+
+.project-box a p {
+  height: 20%;
+  padding: 3px;
+}
+
+.project-box a img {
+  width: 95%;
+  height: 60%;
+  margin: 5px;
 }
