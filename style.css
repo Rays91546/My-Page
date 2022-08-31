@@ -278,14 +278,33 @@ body {
   }
 }
 
-@media (max-width: 1003px) {
+/*@media (max-width: 1003px) {
   .main {
     overflow-y: scroll;
   }
-}
+}*/
 
 .main-text p {
   padding: 5px;
+}
+
+/* No point including this as it's obvious I'm looking for a job? */
+#job {
+  /*height: 50%;
+  background-color: var(--red-color);*/
+  /*text-decoration: none;
+  border-bottom: 6px solid var(--red-color);*/
+}
+
+#me_img_mobile {
+  padding: 5px;
+  /*min-width: 80%;*/
+  margin-left: 25%;
+  max-width: 50%;
+  max-height: 607px;
+  width: auto;
+  height: auto;
+  display: none;
 }
 
 .main-img {
@@ -299,6 +318,23 @@ body {
   display: flex;
   justify-content: center;
   /*padding: 5px;*/
+}
+
+/* Remove the side image of myself */
+@media (max-width: 1135px) {
+  .main-img {
+    display: none;
+  }
+}
+
+/* Add the image of myself below the <p> element saying hey there
+   otherwise my image is stuck at the bottom of the page with a wall
+   of text first if the person is viewing on mobile */
+@media (max-width: 1135px) {
+  #me_img_mobile {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /* Scrollbar shenanigans */
@@ -372,15 +408,18 @@ body {
   color: var(--offwhite-color);
 }
 
+/* Title of Project */
 .project-box a h3 {
   height: 20%;
 }
 
+/* Description of Project */
 .project-box a p {
   height: 20%;
   padding: 3px;
 }
 
+/* Image for Project */
 .project-box a img {
   width: 95%;
   height: 60%;
