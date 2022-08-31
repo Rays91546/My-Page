@@ -14,6 +14,7 @@
   --tertiary-color: #89435C;
   --quadraury-color: #495A8C;
   --red-color: #ff8080;
+  --name-color: #b6dbe0;
   --accent-color: #2C3333;
   --offwhite-color: #E7F6F2;
   --white-color: #FFFFFF;
@@ -24,11 +25,29 @@
   --font-weight-semibold: 600;
 
   --main-offset: 60px;
+  --three-quarter-main-offset: 45px;
+  --half-main-offset: 30px;
+  --quarter-main-offset: 15px;
 }
 
 body {
   margin: 0;
   background-color: var(--primary-color);
+}
+
+/* My name at the top left of the page */
+
+.name {
+  position: fixed;
+  font-size: 25%;
+  text-transform: uppercase;
+  color: var(--offwhite-color);
+  display: flex;
+  align-content: center;
+  z-index: 1001;
+  margin-left: var(--half-main-offset);
+
+  display: none;
 }
 
 /* Main menu at the top with image of leaf */
@@ -40,23 +59,50 @@ body {
   position: fixed; /*  */
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
+  /*justify-content: center;*/
+  /*align-content: center;*/
   z-index: 1000;
+}
+
+.nav-main h3 {
+  width: 100%;
+  height: var(--half-main-offset);
   position: fixed;
+  display: flex;
+  z-index: 1001;
+
+  top: 0;
+
+  font-size: var(--half-main-offset);
+  text-transform: uppercase;
+  color: var(--name-color);
+  margin-top: var(--half-main-offset);
+  margin-left: 10px;
+}
+
+.nav-main h3 b {
+  color: var(--red-color);
+}
+
+@media (max-width: 910px) {
+  .nav-main h3 {
+    display: none;
+  }
 }
 
 .btn-nav {
+  display: none;
+  z-index: 1001;
+  position: left;
   margin: 0;
   width: 60px;
-  height: 100%;
+  height: 60px;
   background-color: var(--red-color);
   background-image: url("img/m_logo_transparent.png");
   background-repeat: no-repeat;
   background-size: 80%;
   background-position: center;
   cursor: pointer;
-  display: none;
 }
 
 .btn-nav:hover {
@@ -70,25 +116,40 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /*padding-left: 65%;*/
   background-color: var(--secondary-color);
-  /*position: right;*/
+}
+
+#my-name {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: uppercase;
+  color: var(--offwhite-color);
+  display: none;
+  gap: 50px;
 }
 
 .nav-main ul li {
-  /*margin-left: 60px;*/
   list-style: none;
-  /*line-height: 2px;*/
 }
 
 .nav-main ul li a {
-  display: block;
+  display: flex;
+  flex-flow: column wrap;
+  z-index: 1002;
   height: 100%;
   padding: 0 15px;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--offwhite-color);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nav-main ul li a h6 {
+  max-width: 100%;
+  font-size: auto;
+  color: var(--primary-color);
+  text-transform: none;
+  display: flex;
+  justify-content: center;
 }
 
 /* Side bar links with links to other info sites */
@@ -102,10 +163,6 @@ body {
   /*top: 0;  Stay at the top */
   bottom: 0; /* Stay at the bottom */
   overflow-x: hidden; /* Disable horizontal scroll */
-  /*background-color: yellow;*/
-  /*padding-top: 37%;*/
-  /*margin-top: 37%;*/
-  /*margin-left: 10px;*/
   display: flex;
   flex-flow: column wrap;
   justify-content: flex-end;
@@ -136,39 +193,84 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* Footer at the bottome of the page */
+
+.footer {
+  height: var(--main-offset); /* Full-height: remove this if you want "auto" height */
+  width: 100%; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  /*z-index: 1;  Stay on top */
+  bottom: 0; /* Stay at the bottom */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  background-color: var(--red-color);
+  margin-left: var(--main-offset);
+  margin-right: var(--main-offset);
+}
+
+.footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /*background-color: red;*/
+}
+
+.footer ul li {
+  list-style: none;
+  /*background-color: purple;*/
+  padding: 20px;
+}
+
+.footer ul li a {
+  /*background-color: white;*/
+  /*height: 50%;
+  padding: 0 15px;*/
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--offwhite-color);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 /* Main content on page */
 
 .main {
   overflow-y: auto;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+  /*margin: var(--main-offset);*/
   margin-left: 60px;
   margin-top: 60px;
   margin-right: 60px;
+  margin-bottom: 60px;
 
-  padding: 10px;
+  padding: 30px;
 
   position: fixed;
-  height: 800px;
+  height: 80%;
 
   /*background-color: #54BAB9;*/
 
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /*align-content: space-between;*/
+  /*align-content: space-around;*/
   z-index: 800;
 }
 
 .main-text {
-  width: 50%;
+  padding: 10px;
+  max-width: 50%;
   display: flex;
   flex-flow: column wrap;
   justify-content: left;
   /*background-color: yellow;*/
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1135px) {
   .main-text {
+    max-width: 100%;
     width: 100%;
     display: flex;
     flex-flow: column wrap;
@@ -187,14 +289,44 @@ body {
 }
 
 .main-img {
-  height: 80%;
+  padding: 10px;
+  /*min-width: 80%;*/
+  max-width: 100%;
+  max-height: 607px;
+  width: auto;
+  height: auto;
   /*width: 50%;*/
   display: flex;
   justify-content: center;
   /*padding: 5px;*/
 }
 
-/* Styling for the project boxes on the Projects page */
+/* Scrollbar shenanigans */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f18a;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Styling for the project boxes on the projects.html page */
 
 .projects {
   margin-top: 70px;
