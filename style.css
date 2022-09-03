@@ -28,9 +28,16 @@
   --three-quarter-main-offset: 45px;
   --half-main-offset: 30px;
   --quarter-main-offset: 15px;
+
+  --project-box-background: #c5e2e8;
+}
+
+html {
+  height: 100%;
 }
 
 body {
+  min-height: 100%;
   margin: 0;
   background-color: var(--primary-color);
 }
@@ -243,12 +250,12 @@ body {
   margin-left: 60px;
   margin-top: 60px;
   margin-right: 60px;
-  margin-bottom: 60px;
+  /*margin-bottom: 60px;*/
 
-  padding: 30px;
+  padding: 10px;
 
   position: fixed;
-  height: 80%;
+  height: calc(100% - var(--main-offset));
 
   /*background-color: #54BAB9;*/
 
@@ -365,13 +372,19 @@ body {
 /* Styling for the project boxes on the projects.html page */
 
 .projects {
-  margin-top: 70px;
-  margin-left: 70px;
-  margin-right: 70px;
+  margin-top: var(--main-offset);
+  margin-left: var(--main-offset);
+  margin-right: var(--main-offset);
+
+  position: fixed;
+  overflow-y: auto;
+  height: calc(100% - var(--main-offset));
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+
+  z-index: 2000;
 }
 
 @media (max-width: 1003px) {
@@ -381,17 +394,19 @@ body {
 }
 
 .project-box {
-  width: 200px;
-  height: auto;
+  width: auto;
+  min-width: 200px;
+  max-width: 300px;
+  height: 300px;
 
   padding: 5px;
   margin: 10px;
   
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 
-  background-color: var(--quadraury-color);
+  background-color: var(--project-box-background);
 
-  display: flex;
+  display: block;
   flex-wrap: wrap;
   justify-content: center;
 
@@ -401,27 +416,63 @@ body {
   border-width: 5px;
 
   text-decoration: none;
+
+  /*transition: transform .2s;*/
+  /*max-height: 30%;*/
+}
+
+.clickable-proj:hover {
+  /*display: block;
+  z-index: 2000;*/
+  border-color: var(--red-color);
+  background-color: var(--offwhite-color);
+}
+
+.unclickable-proj {
+  display: flex;
+}
+
+.unclickable-proj a {
+  cursor: default;
 }
 
 .project-box a {
   text-decoration: none;
-  color: var(--offwhite-color);
+  color: var(--secondary-color);
 }
 
 /* Title of Project */
 .project-box a h3 {
-  height: 20%;
+  height: 10%;
 }
 
 /* Description of Project */
 .project-box a p {
-  height: 20%;
+  height: 40%;
   padding: 3px;
 }
 
 /* Image for Project */
 .project-box a img {
   width: 95%;
-  height: 60%;
-  margin: 5px;
+  height: 45%;
+  margin: 10px;
+}
+
+/* gamba.html */
+
+.gamba {
+  margin-top: var(--main-offset);
+  margin-left: var(--main-offset);
+  margin-right: var(--main-offset);
+
+  position: fixed;
+  overflow-y: auto;
+  height: calc(100% - var(--main-offset));
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  z-index: 2000;
 }
