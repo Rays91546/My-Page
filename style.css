@@ -295,14 +295,6 @@ body {
   padding: 5px;
 }
 
-/* No point including this as it's obvious I'm looking for a job? */
-#job {
-  /*height: 50%;
-  background-color: var(--red-color);*/
-  /*text-decoration: none;
-  border-bottom: 6px solid var(--red-color);*/
-}
-
 #me_img_mobile {
   padding: 5px;
   /*min-width: 80%;*/
@@ -475,4 +467,32 @@ body {
   justify-content: center;
 
   z-index: 2000;
+}
+
+/* contact.html */
+
+.main-contact {
+  position: fixed;
+  margin-top: var(--main-offset);
+  margin-left: var(--main-offset);
+  margin-right: var(--main-offset);
+
+  display: flex;
+  justify-content: center;
+}
+
+.main-text-contact {
+  margin: 5px;
+}
+
+.main-text-contact p {
+  margin: 5px;
+}
+
+.main-text-contact div {
+  flex-flow: row wrap;
+}
+
+.main-text-contact div a {
+  margin: 5px;
 }
