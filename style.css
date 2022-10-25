@@ -99,6 +99,11 @@ body {
   }
 }
 
+/* For script.js */
+.nav-main h3 .blue {
+  color: var(--primary-color);
+}
+
 /* My name displayed at the top left of the nav menu */
 .btn-nav {
   display: none;
