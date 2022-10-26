@@ -24,10 +24,17 @@
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
 
-  --main-offset: 60px;
-  --three-quarter-main-offset: 45px;
-  --half-main-offset: 30px;
-  --quarter-main-offset: 15px;
+  /*--main-offset: 60em;
+  --three-quarter-main-offset: 45em;
+  --half-main-offset: 30em;
+  --quarter-main-offset: 15em;*/
+
+  --main-offset: 5em;
+  --three-quarter-main-offset: 3em;
+  --half-main-offset: 2em;
+  --quarter-main-offset: 1em;
+  --eigth-main-offset: 0.5em;
+  --sixteenth-main-offset: 0.25em;
 
   --project-box-background: #c5e2e8;
 }
@@ -84,8 +91,8 @@ body {
   font-size: var(--half-main-offset);
   text-transform: uppercase;
   color: var(--name-color);
-  margin-top: var(--half-main-offset);
-  margin-left: 10px;
+  margin-top: 1.5em;
+  margin-left: 0.8em;
 }
 
 .nav-main h3 b {
@@ -178,7 +185,7 @@ body {
 
 .sidenav {
   height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 60px; /* Set the width of the sidebar */
+  width: var(--main-offset); /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
   right: 0; /* Stay at the right */
@@ -222,9 +229,9 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   
   /*margin: var(--main-offset);*/
-  margin-left: 60px;
-  margin-top: 60px;
-  margin-right: 60px;
+  margin-left: var(--main-offset);
+  margin-top: var(--main-offset);
+  margin-right: var(--main-offset);
   /*margin-bottom: 60px;*/
 
   padding: 10px;
