@@ -503,6 +503,7 @@ body {
     margin-top: var(--mobile-half-main-offset);
     margin-right: var(--mobile-eigth-main-offset);
     height: calc(100% - var(--mobile-half-main-offset));
+    padding: 3px;
   }
 }
 
