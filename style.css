@@ -40,7 +40,7 @@
   --mobile-main-offset: 15em;
   --mobile-three-quarter-main-offset: 12em;
   --mobile-half-main-offset: 7.5em;
-  --mobile-quarter-main-offset: 3.75em;
+  --mobile-quarter-main-offset: 3.05em;
   --mobile-eigth-main-offset: 1.9em;
   --mobile-sixteenth-main-offset: 0.9em;
 
@@ -211,19 +211,14 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /*background-color: red;*/
 }
 
 .sidenav ul li {
   list-style: none;
-  /*background-color: purple;*/
   padding: 20px;
 }
 
 .sidenav ul li a {
-  /*background-color: white;*/
-  /*height: 50%;
-  padding: 0 15px;*/
   text-transform: uppercase;
   text-decoration: none;
   color: var(--offwhite-color);
@@ -236,23 +231,18 @@ body {
   overflow-y: auto;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   
-  /*margin: var(--main-offset);*/
   margin-left: var(--main-offset);
   margin-top: var(--main-offset);
   margin-right: var(--main-offset);
-  /*margin-bottom: 60px;*/
 
   padding: 10px;
 
   position: fixed;
   height: calc(100% - var(--main-offset));
 
-  /*background-color: #54BAB9;*/
-
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /*align-content: space-around;*/
   z-index: 800;
 }
 
@@ -262,7 +252,6 @@ body {
   display: flex;
   flex-flow: column wrap;
   justify-content: left;
-  /*background-color: yellow;*/
 }
 
 @media (max-width: 1135px) {
@@ -280,11 +269,16 @@ body {
 }
 
 /* smaller mobile  */
+.mobile_image_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #me_img_mobile {
-  padding: 5px;
-  /*min-width: 80%;*/
   margin-left: 25%;
-  max-width: 50%;
+  margin-right: 25%;
+  max-width: 220px;
   max-height: 607px;
   width: auto;
   height: auto;
@@ -293,38 +287,12 @@ body {
 
 .main-img {
   padding: 10px;
-  /*min-width: 80%;*/
   max-width: 100%;
   max-height: 607px;
   width: auto;
   height: auto;
-  /*width: 50%;*/
   display: flex;
   justify-content: center;
-  /*padding: 5px;*/
-}
-
-/* For mobile */
-@media only screen and (max-width: 850px) {
-  .nav-main {
-    height: var(--mobile-three-quarter-main-offset);
-  }
-  .nav-main ul li a {
-    font-size: 150%;
-  }
-  .sidenav {
-    width: var(--mobile-half-main-offset);
-  }
-  /* order matters so change font before main */
-  .main-text {
-    font-size: 130%;
-  }
-  .main {
-    margin-left: var(--mobile-half-main-offset);
-    margin-top: var(--mobile-three-quarter-main-offset);
-    margin-right: var(--mobile-half-main-offset);
-    height: calc(100% - var(--mobile-three-quarter-main-offset));
-  }
 }
 
 /* Remove the side image of myself */
@@ -460,16 +428,6 @@ body {
   margin: 10px;
 }
 
-/* for mobile */
-@media only screen and (max-width: 850px) {
-  .projects {
-    margin-top: var(--mobile-three-quarter-main-offset);
-    margin-left: var(--mobile-half-main-offset);
-    margin-right: var(--mobile-half-main-offset);
-    height: calc(100% - var(--mobile-three-quarter-main-offset));
-  }
-}
-
 /* gamba.html */
 
 .gamba {
@@ -516,12 +474,57 @@ body {
   margin: 5px;
 }
 
-/* for mobile */
-@media only screen and (max-width: 850px) {
+/* For mobile main content */
+@media only screen and (min-width: 360px) and (max-width: 850px) {
+  .nav-main {
+    height: var(--mobile-half-main-offset);
+  }
+  .nav-main ul li a {
+    font-size: 138%;
+  }
+  .sidenav {
+    width: var(--mobile-quarter-main-offset);
+  }
+  .sidenav ul li{
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  /* order matters so change font before main */
+  .main-text {
+    font-size: 130%;
+  }
+  .main {
+    margin-left: var(--mobile-quarter-main-offset);
+    margin-top: var(--mobile-half-main-offset);
+    margin-right: var(--mobile-quarter-main-offset);
+    height: calc(100% - var(--mobile-half-main-offset));
+  }
+}
+
+/* image in main.html */
+@media only screen and (min-width: 360px) and (max-width: 850px)  {
+  #me_img_mobile {
+    /* transform: translate(-25%, 0%); */
+  }
+}
+
+/* for mobile projects.html */
+@media only screen and (min-width: 360px) and (max-width: 850px)  {
+  .projects {
+    margin-left: var(--mobile-quarter-main-offset);
+    margin-top: var(--mobile-half-main-offset);
+    margin-right: var(--mobile-quarter-main-offset);
+    height: calc(100% - var(--mobile-half-main-offset));
+  }
+}
+
+/* for mobile maint-contact.html */
+@media only screen and (min-width: 360px) and (max-width: 850px)  {
   .main-contact {
-    margin-top: var(--mobile-three-quarter-main-offset);
-    margin-left: var(--mobile-half-main-offset);
-    margin-right: var(--mobile-half-main-offset);
+    margin-left: var(--mobile-quarter-main-offset);
+    margin-top: var(--mobile-half-main-offset);
+    margin-right: var(--mobile-quarter-main-offset);
     font-size: 130%;
   }
 }
