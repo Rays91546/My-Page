@@ -36,6 +36,14 @@
   --eigth-main-offset: 0.5em;
   --sixteenth-main-offset: 0.25em;
 
+  /* mobile vars */
+  --mobile-main-offset: 15em;
+  --mobile-three-quarter-main-offset: 12em;
+  --mobile-half-main-offset: 7.5em;
+  --mobile-quarter-main-offset: 3.75em;
+  --mobile-eigth-main-offset: 1.9em;
+  --mobile-sixteenth-main-offset: 0.9em;
+
   --project-box-background: #c5e2e8;
 }
 
@@ -296,6 +304,29 @@ body {
   /*padding: 5px;*/
 }
 
+/* For mobile */
+@media only screen and (max-width: 850px) {
+  .nav-main {
+    height: var(--mobile-three-quarter-main-offset);
+  }
+  .nav-main ul li a {
+    font-size: 150%;
+  }
+  .sidenav {
+    width: var(--mobile-half-main-offset);
+  }
+  /* order matters so change font before main */
+  .main-text {
+    font-size: 130%;
+  }
+  .main {
+    margin-left: var(--mobile-half-main-offset);
+    margin-top: var(--mobile-three-quarter-main-offset);
+    margin-right: var(--mobile-half-main-offset);
+    height: calc(100% - var(--mobile-three-quarter-main-offset));
+  }
+}
+
 /* Remove the side image of myself */
 @media (max-width: 1135px) {
   .main-img {
@@ -429,6 +460,16 @@ body {
   margin: 10px;
 }
 
+/* for mobile */
+@media only screen and (max-width: 850px) {
+  .projects {
+    margin-top: var(--mobile-three-quarter-main-offset);
+    margin-left: var(--mobile-half-main-offset);
+    margin-right: var(--mobile-half-main-offset);
+    height: calc(100% - var(--mobile-three-quarter-main-offset));
+  }
+}
+
 /* gamba.html */
 
 .gamba {
@@ -473,4 +514,14 @@ body {
 
 .main-text-contact div a {
   margin: 5px;
+}
+
+/* for mobile */
+@media only screen and (max-width: 850px) {
+  .main-contact {
+    margin-top: var(--mobile-three-quarter-main-offset);
+    margin-left: var(--mobile-half-main-offset);
+    margin-right: var(--mobile-half-main-offset);
+    font-size: 130%;
+  }
 }
