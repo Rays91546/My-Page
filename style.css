@@ -483,7 +483,7 @@ body {
     font-size: 138%;
   }
   .sidenav {
-    width: var(--mobile-quarter-main-offset);
+    width: var(--mobile-eigth-main-offset);
   }
   .sidenav ul li{
     padding: 5px;
@@ -493,11 +493,15 @@ body {
   /* order matters so change font before main */
   .main-text {
     font-size: 130%;
+    padding: 2px;
+  }
+  .main-text p {
+    padding: 2px;
   }
   .main {
-    margin-left: var(--mobile-quarter-main-offset);
+    margin-left: var(--mobile-eigth-main-offset);
     margin-top: var(--mobile-half-main-offset);
-    margin-right: var(--mobile-quarter-main-offset);
+    margin-right: var(--mobile-eigth-main-offset);
     height: calc(100% - var(--mobile-half-main-offset));
   }
 }
